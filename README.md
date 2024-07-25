@@ -1,16 +1,16 @@
-Welcome! This is @Lyamoe!
-I go by any pronouns ^^
+#  ✨ Meet Lyamoe!
+
+😄 Call me by she/he/they
+
+👩‍💻 System analysis and development student
+
+🧠 Frequently trying to learn something new!
 
 
-Know more about me:
-
-~ Currently a systems analysis and development student;
-
-~ Don't know exactly what she wants to work with;
-
-~ Currently focusing on learning more about front-end development;
-
-~ Game and music enjoyer!
+## 🛠 Abilities
+HTML, CSS, JavaScript, and Python.
+Still a beginner!
 
 
-Contact me on karinesanper@gmail.com
+## 🔗 See my profile!
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karine-santos-peres-63b1482aa/)
