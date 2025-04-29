@@ -8,8 +8,8 @@
 
 
 ## 🛠 Abilities
-Web package (HTML, SCSS, JS) and some CSS frameworks.
-Some Python, PHP and Java knowledge.
+Web package (HTML, SCSS, JS) and a few CSS frameworks.\
+Some Python, PHP and Java knowledge.\
 Still a beginner!
 
 
