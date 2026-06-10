@@ -1,0 +1,4 @@
+*.scss
+*.css.map
+*.prettierrc
+**/teste.html
