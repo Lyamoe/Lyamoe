@@ -1,165 +1,175 @@
 #projects,
 #about {
-  display: none;
+	display: none;
 }
 
 .redish-border-1px {
-  border: 1px solid #e15e6e !important;
+	border: 1px solid #e15e6e !important;
 }
 
 .redish-text {
-  color: #e15e6e !important;
+	color: #e15e6e !important;
 }
 
 .text-justify {
-  text-align: justify;
+	text-align: justify;
 }
 
 .green-text-box {
-  background-color: #c3e6d4 !important;
+	background-color: #c3e6d4 !important;
 }
 
 .h-80vh {
-  height: 80vh;
+	height: 80vh;
 }
 
 .h-10vh {
-  height: 10vh;
-  min-height: 100px;
+	height: 10vh;
+	min-height: 100px;
 }
 
 .max-h-25vh {
-  max-height: 25vh !important;
+	max-height: 25vh !important;
 }
 
 .object-fit-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 body {
-  background-color: #f4f0e5;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
+	background-color: #f4f0e5;
+	min-height: -moz-fit-content;
+	min-height: fit-content;
 }
 
 h1 {
-  font-family: "Bagel Fat One", system-ui;
+	font-family: "Bagel Fat One", system-ui;
 }
 
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Delius", cursive;
+h6,
+select {
+	font-family: "Delius", cursive;
 }
 
 p,
 button,
 a,
 address {
-  font-family: "Indie Flower", cursive !important;
+	font-family: "Indie Flower", cursive !important;
 }
 
 body {
-  background: linear-gradient(rgba(244, 240, 229, 0.9), rgba(244, 240, 229, 0.9)), url("../img/bg.jpg");
+	background:
+		linear-gradient(rgba(244, 240, 229, 0.9), rgba(244, 240, 229, 0.9)),
+		url("../img/bg.jpg");
 }
 
 main {
-  height: 80vh;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
+	height: 80vh;
+	min-height: -moz-fit-content;
+	min-height: fit-content;
 }
 
 a {
-  transition: color 0.3s ease;
+	transition: color 0.3s ease;
 }
 a:hover {
-  color: #e1918e !important;
+	color: #e1918e !important;
 }
 
 h1:not(#nome-intro) {
-  margin-top: 3vh !important;
+	margin-top: 3vh !important;
 }
 
 @media (max-height: 700px) {
-  footer {
-    margin-top: 20vh;
-  }
+	footer {
+		margin-top: 20vh;
+	}
 }
 .logo {
-  height: 35px;
-  overflow: hidden;
+	height: 35px;
+	overflow: hidden;
 }
 .logo > img {
-  height: 35px;
+	height: 35px;
 }
 
 .index-circle {
-  background-color: #e1918e;
-  height: 550px;
-  width: 550px;
-  margin-left: calc(50% - 275px);
-  border-color: #c3e6d4;
-  border: 10px solid;
-  border-color: transparent transparent #c3e6d4 transparent;
+	background-color: #e1918e;
+	height: 550px;
+	width: 550px;
+	margin-left: calc(50% - 275px);
+	border-color: #c3e6d4;
+	border: 10px solid;
+	border-color: transparent transparent #c3e6d4 transparent;
 }
 
 @media (max-height: 800px) {
-  .index-circle {
-    height: 440px;
-    width: 440px;
-    margin-left: calc(50% - 220px);
-  }
+	.index-circle {
+		height: 440px;
+		width: 440px;
+		margin-left: calc(50% - 220px);
+	}
 }
 @media (max-width: 750px) {
-  .index-circle {
-    height: 300px;
-    width: 300px;
-    margin-left: calc(50% - 150px);
-  }
+	.index-circle {
+		height: 300px;
+		width: 300px;
+		margin-left: calc(50% - 150px);
+	}
 }
 #profile {
-  height: 180px;
-  width: 180px;
+	height: 180px;
+	width: 180px;
+}
+
+#language-switcher {
+	margin-top: 10px;
+  border: 1px solid #e15e6e;
+  background-color: #c3e6d4;
+  border-radius: 5px;
 }
 
 .card-img-top {
-  -o-object-position: 0 16%;
-     object-position: 0 16%;
+	-o-object-position: 0 16%;
+	object-position: 0 16%;
 }
 
 .card {
-  border: solid 1px #e0c4ae !important;
+	border: solid 1px #e0c4ae !important;
 }
 
 @media (max-width: 770px) {
-  .card-img-top {
-    max-height: 50vh;
-  }
+	.card-img-top {
+		max-height: 50vh;
+	}
 }
 button {
-  background-color: #c3e6d4 !important;
-  transition: all 0.3s ease;
+	background-color: #c3e6d4 !important;
+	transition: all 0.3s ease;
 }
 button:hover {
-  background-color: #e15e6e !important;
-  color: #c3e6d4 !important;
-  border-color: #c3e6d4 !important;
+	background-color: #e15e6e !important;
+	color: #c3e6d4 !important;
+	border-color: #c3e6d4 !important;
 }
 
 .btn-responsive {
-  width: 20vw;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  max-width: 35%;
-  height: 7vh;
-  font-size: 3vh;
+	width: 20vw;
+	min-width: -moz-fit-content;
+	min-width: fit-content;
+	max-width: 35%;
+	height: 7vh;
+	font-size: 3vh;
 }
 
 @media (max-width: 450px) {
-  .btn-responsive {
-    width: 40vw;
-  }
-}/*# sourceMappingURL=style.css.map */
+	.btn-responsive {
+		width: 40vw;
+	}
+} /*# sourceMappingURL=style.css.map */

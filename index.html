@@ -62,6 +62,12 @@ require_once __DIR__ . '/../config/getData.php';
 				<nav class="col-6" role="navigation">
 					<ul class="nav justify-content-end">
 						<li class="nav-item">
+							<select id="language-switcher">
+								<option value="en" selected>English</option>
+								<option value="pt-br">Português</option>
+							</select>
+						</li>
+						<li class="nav-item">
 							<a
 								class="fs-4 nav-link redish-text"
 								target="_blank"
@@ -93,8 +99,13 @@ require_once __DIR__ . '/../config/getData.php';
 					<div
 						class="rounded-circle text-center d-flex flex-column align-items-center justify-content-center index-circle"
 					>
-						<h1 id="nome-intro">Aqui é a Lyam!</h1>
-						<h2>Game e Web Dev</h2>
+						<h1 id="nome-intro" class="lang-pt-br" style="display: none">
+							Aqui é a Lyam!
+						</h1>
+						<h2 class="lang-pt-br" style="display: none">Game e Web Dev</h2>
+
+						<h1 id="nome-intro" class="lang-en">Hi, I'm Lyam!</h1>
+						<h2 class="lang-en">Game and Web Dev</h2>
 					</div>
 				</section>
 				<section
@@ -102,7 +113,8 @@ require_once __DIR__ . '/../config/getData.php';
 				>
 					<button
 						type="button"
-						class="btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						style="display: none"
 						aria-label="Ir para a seção sobre"
 						onclick="trocarMain('about')"
 					>
@@ -110,11 +122,28 @@ require_once __DIR__ . '/../config/getData.php';
 					</button>
 					<button
 						type="button"
-						class="btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						style="display: none"
 						aria-label="Ir para a seção projetos"
 						onclick="trocarMain('projects')"
 					>
 						Projetos
+					</button>
+					<button
+						type="button"
+						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						aria-label="Ir para a seção sobre"
+						onclick="trocarMain('about')"
+					>
+						About
+					</button>
+					<button
+						type="button"
+						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						aria-label="Ir para a seção projetos"
+						onclick="trocarMain('projects')"
+					>
+						Projects
 					</button>
 				</section>
 			</article>
@@ -124,20 +153,35 @@ require_once __DIR__ . '/../config/getData.php';
 			<article id="geral-about" class="row">
 				<section id="text-about" class="container">
 					<div class="row">
-						<h1>Sobre mim</h1>
+						<h1 class="lang-en">About Me</h1>
+						<h1 class="lang-pt-br" style="display: none">Sobre mim</h1>
 						<hr class="redish-border-1px" />
 					</div>
 					<div class="row m-3">
 						<div
 							class="green-text-box col-12 col-md-9 rounded-3 d-flex align-items-center"
 						>
-							<p class="fs-5 p-2 text-justify" id="self-description">
+							<p
+								class="lang-pt-br fs-5 p-2 text-justify"
+								id="self-description"
+								style="display: none"
+							>
 								Eu me chamo Lyam, um estudante de Análise e Desenvolvimento de
 								Sistemas (ADS) na Fatec e que tenho trabalhado em projects de
 								programação de jogos e front-end desde os 14 anos de idade. Para
 								criações desktop, já trabalhei com conjunto Web (HTML, CSS,
 								JavaScript), assim como Java, PHP e Python; enquanto para jogos,
 								tenho criações próprias feitas no GameMaker (gml) e no Roblox
+								(LUA).
+							</p>
+
+							<p class="lang-en fs-5 p-2 text-justify" id="self-description-en">
+								My name is Lyam, a student of Systems Analysis and Development
+								(ADS) at Fatec, and I have been working on game development and
+								front-end projects since I was 14 years old. For desktop
+								creations, I have worked with web technologies (HTML, CSS,
+								JavaScript), as well as Java, PHP, and Python; while for games,
+								I have created my own projects using GameMaker (gml) and Roblox
 								(LUA).
 							</p>
 						</div>
@@ -166,7 +210,8 @@ require_once __DIR__ . '/../config/getData.php';
 				>
 					<button
 						type="button"
-						class="btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						style="display: none"
 						aria-label="Ir para a seção home"
 						onclick="trocarMain('home')"
 					>
@@ -174,11 +219,28 @@ require_once __DIR__ . '/../config/getData.php';
 					</button>
 					<button
 						type="button"
-						class="btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						style="display: none"
 						aria-label="Ir para a seção Projetos"
 						onclick="trocarMain('projects')"
 					>
 						Projetos
+					</button>
+					<button
+						type="button"
+						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						aria-label="Ir para a seção home"
+						onclick="trocarMain('home')"
+					>
+						Home
+					</button>
+					<button
+						type="button"
+						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						aria-label="Ir para a seção Projetos"
+						onclick="trocarMain('projects')"
+					>
+						Projects
 					</button>
 				</section>
 			</article>
@@ -204,10 +266,18 @@ require_once __DIR__ . '/../config/getData.php';
 									/>
 									<div class="card-body">
 										<h2 class="card-title fs-5 fs-md-4">Lattemático</h2>
-										<p class="card-text fs-6 fs-md-5">
+										<p
+											class="lang-pt-br card-text fs-6 fs-md-5"
+											style="display: none"
+										>
 											Desenvolvido em grupo para uma Gamejam realizada na
 											faculdade com o objetivo de ensinar vestibulandos
 											matemática de uma forma dinâmica e divertida.
+										</p>
+										<p class="lang-en card-text fs-6 fs-md-5">
+											Developed in a group for a Gamejam held at the university
+											with the goal of teaching entrance exam students
+											mathematics in a dynamic and fun way.
 										</p>
 									</div>
 								</div>
@@ -222,11 +292,20 @@ require_once __DIR__ . '/../config/getData.php';
 									/>
 									<div class="card-body">
 										<h2 class="card-title fs-5 fs-md-4">Mental Kombat</h2>
-										<p class="card-text fs-6 fs-md-5">
+										<p
+											class="lang-pt-br card-text fs-6 fs-md-5"
+											style="display: none"
+										>
 											Segundo jogo desenvolvido para outra edição da mesma
 											Gamejam, com o objetivo de ensinar crianças a calcular
 											matemática mentalmente, sem o auxílio de papel ou
 											calculadora.
+										</p>
+										<p class="lang-en card-text fs-6 fs-md-5">
+											Second game developed for another edition of the same
+											Gamejam, with the goal of teaching children to calculate
+											mathematics mentally, without the help of paper or
+											calculator.
 										</p>
 									</div>
 								</div>
@@ -239,7 +318,8 @@ require_once __DIR__ . '/../config/getData.php';
 				>
 					<button
 						type="button"
-						class="btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						style="display: none"
 						aria-label="Ir para a seção home"
 						onclick="trocarMain('home')"
 					>
@@ -247,20 +327,41 @@ require_once __DIR__ . '/../config/getData.php';
 					</button>
 					<button
 						type="button"
-						class="btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						style="display: none"
 						aria-label="Ir para a seção Sobre"
 						onclick="trocarMain('about')"
 					>
 						Sobre
+					</button>
+					<button
+						type="button"
+						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						aria-label="Ir para a seção home"
+						onclick="trocarMain('home')"
+					>
+						Home
+					</button>
+					<button
+						type="button"
+						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						aria-label="Ir para a seção Sobre"
+						onclick="trocarMain('about')"
+					>
+						About
 					</button>
 				</section>
 			</article>
 		</main>
 		<!--? ==================== FOOTER ==================== -->
 		<footer class="text-center">
-			<address class="redish-text">
+			<address class="lang-pt-br redish-text" style="display: none">
 				Portfólio por © Lyamoe <br />
 				Entre em contato!
+			</address>
+			<address class="lang-en redish-text">
+				Portfolio by © Lyamoe <br />
+				Contact me!
 			</address>
 		</footer>
 		<!--? ==================== SCRIPTS ==================== -->
@@ -271,6 +372,20 @@ require_once __DIR__ . '/../config/getData.php';
 					.forEach((main) => (main.style.display = "none"));
 				document.getElementById(id).style.display = "block";
 			}
+		</script>
+
+		<script>
+			document
+				.getElementById("language-switcher")
+				.addEventListener("change", function () {
+					const lang = this.value;
+					document
+						.querySelectorAll(".lang-en, .lang-pt-br")
+						.forEach((el) => (el.style.display = "none"));
+					document
+						.querySelectorAll(".lang-" + lang)
+						.forEach((el) => (el.style.display = "block"));
+				});
 		</script>
 	</body>
 </html>
