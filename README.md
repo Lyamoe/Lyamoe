@@ -14,6 +14,8 @@ I'm **Lyam**! Currently creating projects in different paths to improve in diffe
 - **Pronouns:** he/they/she
 - **Current Focus:** Leveling up backend skills
 
+More of myself on my [portfolio](https://lyamoe.github.io/Lyamoe/)
+
 ---
 
 ## 🛠️ What I've studied so far
