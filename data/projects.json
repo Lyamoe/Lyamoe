@@ -5,7 +5,7 @@
         "release-date": "2024-12-03",
         "description-pt-br": "Desenvolvido em grupo para a Gamejam Fatec São Sebastião realizada na faculdade com o objetivo de ensinar vestibulandos matemática de uma forma dinâmica e divertida.",
         "description-en": "Developed in a group for the Gamejam Fatec São Sebastião held at the university with the goal of teaching entrance exam students mathematics in a dynamic and fun way.",
-        "banner-image": "/img/lattematico-banner.png",
+        "banner-image": "../img/lattematico-banner.png",
         "banner-image-alt": "Imagem placeholder do projeto Lattemático",
         "link": "https://github.com/Jogint/lattematico"
         },
@@ -14,7 +14,7 @@
         "release-date": "2025-06-24",
         "description-pt-br": "Portfólio pessoal criado para demonstrar minhas habilidades e projetos desenvolvidos ao longo da minha jornada como desenvolvedor.",
         "description-en": "Personal portfolio created to showcase my skills and projects developed throughout my journey as a developer.",
-        "banner-image": "/img/portfolio-banner.png",
+        "banner-image": "../img/portfolio-banner.png",
         "banner-image-alt": "Imagem placeholder do projeto My personal portfolio",
         "link": "https://lyamoe.github.io/Lyamoe/"
         },
@@ -23,7 +23,7 @@
         "release-date": "2025-11-19",
         "description-pt-br": "Segundo jogo desenvolvido para outra edição da Gamejam Fatec São Sebastião, com o objetivo de ensinar crianças a calcular matemática mentalmente, sem o auxílio de papel ou calculadora.",
         "description-en": "Second game developed for another edition of the Gamejam Fatec São Sebastião, with the goal of teaching children to calculate mathematics mentally, without the help of paper or calculator.",
-        "banner-image": "/img/mental-kombat-banner.png",
+        "banner-image": "../img/mental-kombat-banner.png",
         "banner-image-alt": "Imagem placeholder do projeto Mental Kombat",
         "link": "https://chuumelabs.itch.io/mental-kombat-alpha"
         }
