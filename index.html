@@ -106,246 +106,32 @@
 				<section
 					class="buttons d-flex gap-3 flex-wrap justify-content-center mt-5 mb-3"
 				>
-					<button
-						type="button"
-						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-						style="display: none"
-						aria-label="Ir para a seção sobre"
-						onclick="trocarMain('about')"
-					>
-						Sobre
-					</button>
-					<button
-						type="button"
-						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-						style="display: none"
-						aria-label="Ir para a seção projetos"
-						onclick="trocarMain('projects')"
-					>
-						Projetos
-					</button>
-					<button
-						type="button"
-						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-						aria-label="Ir para a seção sobre"
-						onclick="trocarMain('about')"
-					>
-						About
-					</button>
-					<button
-						type="button"
-						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-						aria-label="Ir para a seção projetos"
-						onclick="trocarMain('projects')"
-					>
-						Projects
-					</button>
-				</section>
-			</article>
-		</main>
-		<!--? ==================== SCREEN 2 - ABOUT ==================== -->
-		<main id="about" class="container w-100">
-			<article id="geral-about" class="row">
-				<section id="text-about" class="container">
-					<div class="row">
-						<h1 class="lang-en">About Me</h1>
-						<h1 class="lang-pt-br" style="display: none">Sobre mim</h1>
-						<hr class="redish-border-1px" />
-					</div>
-					<div class="row m-3">
-						<div
-							class="green-text-box col-12 col-md-9 rounded-3 d-flex align-items-center"
-						>
-							<p
-								class="lang-pt-br fs-5 p-2 text-justify"
-								id="self-description"
-								style="display: none"
-							>
-								Eu me chamo Lyam, um estudante de Análise e Desenvolvimento de
-								Sistemas (ADS) na Fatec e que tenho trabalhado em projects de
-								programação de jogos e front-end desde os 14 anos de idade. Para
-								criações desktop, já trabalhei com conjunto Web (HTML, CSS,
-								JavaScript), assim como Java, PHP e Python; enquanto para jogos,
-								tenho criações próprias feitas no GameMaker (gml) e no Roblox
-								(LUA).
-							</p>
-
-							<p class="lang-en fs-5 p-2 text-justify" id="self-description-en">
-								My name is Lyam, a student of Systems Analysis and Development
-								(ADS) at Fatec, and I have been working on game development and
-								front-end projects since I was 14 years old. For desktop
-								creations, I have worked with web technologies (HTML, CSS,
-								JavaScript), as well as Java, PHP, and Python; while for games,
-								I have created my own projects using GameMaker (gml) and Roblox
-								(LUA).
-							</p>
-						</div>
-						<figure
-							id="profile-div"
-							class="col-12 col-md-3 d-flex justify-content-center d-none d-md-flex"
-						>
-							<img
-								class="rounded-circle align-self-center"
-								id="profile"
-								src="img/pfp.jpg"
-								alt="Imagem provisória, atualmente mostrando Son Hyeju em um vestido branco"
-							/>
-						</figure>
-					</div>
-
-					<img
-						id="banner-about"
-						class="img-fluid row h-10vh w-100 object-fit-cover my-5 ms-1"
-						src="img/banner-about.jpg"
-						alt="Banner rosa para a seção Sobre"
-					/>
-				</section>
-				<section
-					class="buttons d-flex gap-3 flex-wrap justify-content-center mt-5 mb-3"
+					<a
+					class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+					style="display: none"
+					href="/pages/about.html"
 				>
-					<button
-						type="button"
-						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-						style="display: none"
-						aria-label="Ir para a seção home"
-						onclick="trocarMain('home')"
-					>
-						Inicio
-					</button>
-					<button
-						type="button"
-						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-						style="display: none"
-						aria-label="Ir para a seção Projetos"
-						onclick="trocarMain('projects')"
-					>
-						Projetos
-					</button>
-					<button
-						type="button"
-						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-						aria-label="Ir para a seção home"
-						onclick="trocarMain('home')"
-					>
-						Home
-					</button>
-					<button
-						type="button"
-						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-						aria-label="Ir para a seção Projetos"
-						onclick="trocarMain('projects')"
-					>
-						Projects
-					</button>
-				</section>
-			</article>
-		</main>
-		<!--? ==================== SCREEN 3 - PROJECTS ==================== -->
-		<main id="projects" class="container w-100">
-			<article id="geral-projects" class="row">
-				<section id="cards-projects">
-					<h1 class="lang-pt-br" style="display: none">Projetos</h1>
-					<h1 class="lang-en">Projects</h1>
-					<hr class="redish-border-1px" />
-					<div class="container">
-						<div
-							id="card-group"
-							class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
-						>
-							<div class="col">
-								<div class="card flex-fill">
-									<img
-										src="img/card1.jpeg"
-										class="card-img-top object-fit-cover max-h-25vh"
-										style="max-height: 50vh"
-										alt="Placeholder para o projeto 1"
-									/>
-									<div class="card-body">
-										<h2 class="card-title fs-5 fs-md-4">Lattemático</h2>
-										<p
-											class="lang-pt-br card-text fs-6 fs-md-5"
-											style="display: none"
-										>
-											Desenvolvido em grupo para uma Gamejam realizada na
-											faculdade com o objetivo de ensinar vestibulandos
-											matemática de uma forma dinâmica e divertida.
-										</p>
-										<p class="lang-en card-text fs-6 fs-md-5">
-											Developed in a group for a Gamejam held at the university
-											with the goal of teaching entrance exam students
-											mathematics in a dynamic and fun way.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col">
-								<div class="card flex-fill">
-									<img
-										src="img/card2.jpeg"
-										class="card-img-top object-fit-cover max-h-25vh"
-										style="max-height: 50vh"
-										alt="Placeholder para o projeto 2"
-									/>
-									<div class="card-body">
-										<h2 class="card-title fs-5 fs-md-4">Mental Kombat</h2>
-										<p
-											class="lang-pt-br card-text fs-6 fs-md-5"
-											style="display: none"
-										>
-											Segundo jogo desenvolvido para outra edição da mesma
-											Gamejam, com o objetivo de ensinar crianças a calcular
-											matemática mentalmente, sem o auxílio de papel ou
-											calculadora.
-										</p>
-										<p class="lang-en card-text fs-6 fs-md-5">
-											Second game developed for another edition of the same
-											Gamejam, with the goal of teaching children to calculate
-											mathematics mentally, without the help of paper or
-											calculator.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section
-					class="buttons d-flex gap-3 flex-wrap justify-content-center mt-5 mb-3"
+					Sobre
+				</a>
+				<a
+					class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+					style="display: none"
+					href="/pages/projects.html"
 				>
-					<button
-						type="button"
-						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-						style="display: none"
-						aria-label="Ir para a seção home"
-						onclick="trocarMain('home')"
-					>
-						Inicio
-					</button>
-					<button
-						type="button"
-						class="lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-						style="display: none"
-						aria-label="Ir para a seção Sobre"
-						onclick="trocarMain('about')"
-					>
-						Sobre
-					</button>
-					<button
-						type="button"
-						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-						aria-label="Ir para a seção home"
-						onclick="trocarMain('home')"
-					>
-						Home
-					</button>
-					<button
-						type="button"
-						class="lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-						aria-label="Ir para a seção Sobre"
-						onclick="trocarMain('about')"
-					>
-						About
-					</button>
+					Projetos
+				</a>
+				<a
+					class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+					href="/pages/about.html"
+				>
+					About
+				</a>
+				<a
+					class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+					href="/pages/projects.html"
+				>
+					Projects
+				</a>
 				</section>
 			</article>
 		</main>
@@ -361,15 +147,6 @@
 			</address>
 		</footer>
 		<!--? ==================== SCRIPTS ==================== -->
-		<script>
-			function trocarMain(id) {
-				document
-					.querySelectorAll("main")
-					.forEach((main) => (main.style.display = "none"));
-				document.getElementById(id).style.display = "block";
-			}
-		</script>
-
 		<script>
 			document
 				.getElementById("language-switcher")

@@ -1,8 +1,3 @@
-#projects,
-#about {
-	display: none;
-}
-
 .redish-border-1px {
 	border: 1px solid #e15e6e !important;
 }
@@ -144,16 +139,21 @@ h1:not(#nome-intro) {
 	border: solid 1px #e0c4ae !important;
 }
 
+.project-card {
+	text-decoration: none;
+	color: inherit;
+}
+
 @media (max-width: 770px) {
 	.card-img-top {
 		max-height: 50vh;
 	}
 }
-button {
+.page-control{
 	background-color: #c3e6d4 !important;
 	transition: all 0.3s ease;
 }
-button:hover {
+.page-control:hover {
 	background-color: #e15e6e !important;
 	color: #c3e6d4 !important;
 	border-color: #c3e6d4 !important;
