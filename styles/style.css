@@ -139,6 +139,11 @@ h1:not(#nome-intro) {
 	border: solid 1px #e0c4ae !important;
 }
 
+.project-card {
+	text-decoration: none;
+	color: inherit;
+}
+
 @media (max-width: 770px) {
 	.card-img-top {
 		max-height: 50vh;

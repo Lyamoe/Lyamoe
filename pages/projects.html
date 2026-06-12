@@ -43,10 +43,7 @@
 		<!--? ==================== HEADER ==================== -->
 		<div id="header-container" class="container">
 			<header class="row">
-				<a
-					class="fs-4 col-6 logo redish-text"
-					href="/index.html"
-				>
+				<a class="fs-4 col-6 logo redish-text" href="/index.html">
 					<img
 						height="35px"
 						width="35px"
@@ -98,60 +95,7 @@
 							id="card-group"
 							class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
 						>
-							<div class="col">
-								<div class="card flex-fill">
-									<img
-										src="/img/card1.jpeg"
-										class="card-img-top object-fit-cover max-h-25vh"
-										style="max-height: 50vh"
-										alt="Placeholder para o projeto 1"
-									/>
-									<div class="card-body">
-										<h2 class="card-title fs-5 fs-md-4">Lattemático</h2>
-										<p
-											class="lang-pt-br card-text fs-6 fs-md-5"
-											style="display: none"
-										>
-											Desenvolvido em grupo para uma Gamejam realizada na
-											faculdade com o objetivo de ensinar vestibulandos
-											matemática de uma forma dinâmica e divertida.
-										</p>
-										<p class="lang-en card-text fs-6 fs-md-5">
-											Developed in a group for a Gamejam held at the university
-											with the goal of teaching entrance exam students
-											mathematics in a dynamic and fun way.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col">
-								<div class="card flex-fill">
-									<img
-										src="/img/card2.jpeg"
-										class="card-img-top object-fit-cover max-h-25vh"
-										style="max-height: 50vh"
-										alt="Placeholder para o projeto 2"
-									/>
-									<div class="card-body">
-										<h2 class="card-title fs-5 fs-md-4">Mental Kombat</h2>
-										<p
-											class="lang-pt-br card-text fs-6 fs-md-5"
-											style="display: none"
-										>
-											Segundo jogo desenvolvido para outra edição da mesma
-											Gamejam, com o objetivo de ensinar crianças a calcular
-											matemática mentalmente, sem o auxílio de papel ou
-											calculadora.
-										</p>
-										<p class="lang-en card-text fs-6 fs-md-5">
-											Second game developed for another edition of the same
-											Gamejam, with the goal of teaching children to calculate
-											mathematics mentally, without the help of paper or
-											calculator.
-										</p>
-									</div>
-								</div>
-							</div>
+							<!-- Cards will be dynamically inserted here -->
 						</div>
 					</div>
 				</section>
@@ -211,6 +155,63 @@
 						.querySelectorAll(".lang-" + lang)
 						.forEach((el) => (el.style.display = "block"));
 				});
+		</script>
+
+		<script>
+			// Function to load and render projects
+			async function loadProjects() {
+				try {
+					const response = await fetch("/data/projects.json");
+					if (!response.ok) {
+						throw new Error(`HTTP error! status: ${response.status}`);
+					}
+
+					const data = await response.json();
+					const container = document.getElementById("card-group");
+
+					// 1. Sort the projects array by date (Newest First)
+					const sortedProjects = data.projects.sort((a, b) => {
+						return new Date(b["release-date"]) - new Date(a["release-date"]);
+					});
+
+					// 2. Map over the sorted array to generate HTML
+					const cardsHTML = sortedProjects
+						.map((project) => {
+							return `
+                <a class="project-card col" href="${project["link"]}" target="_blank">
+                    <div class="card flex-fill">
+                        <img
+                            src="${project["banner-image"]}"
+                            class="card-img-top object-fit-cover max-h-25vh"
+                            style="max-height: 50vh"
+                            alt="${project["banner-image-alt"]}"
+                        />
+                        <div class="card-body">
+                            <h2 class="card-title fs-5 fs-md-4">${project.name}</h2>
+                            <p class="text-muted small">Released: ${project["release-date"]}</p>
+                            <p
+                                class="lang-pt-br card-text fs-6 fs-md-5"
+                                style="display: none"
+                            >
+                                ${project["description-pt-br"]}
+                            </p>
+                            <p class="lang-en card-text fs-6 fs-md-5">
+                                ${project["description-en"]}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            `;
+						})
+						.join("");
+
+					container.innerHTML = cardsHTML;
+				} catch (error) {
+					console.error("Could not load projects:", error);
+				}
+			}
+
+			document.addEventListener("DOMContentLoaded", loadProjects);
 		</script>
 	</body>
 </html>
