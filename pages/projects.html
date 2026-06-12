@@ -158,7 +158,6 @@
 		</script>
 
 		<script>
-			// Function to load and render projects
 			async function loadProjects() {
 				try {
 					const response = await fetch("/data/projects.json");
@@ -169,7 +168,6 @@
 					const data = await response.json();
 					const container = document.getElementById("card-group");
 
-					// 1. Sort the projects array by date (Newest First)
 					const sortedProjects = data.projects.sort((a, b) => {
 						return new Date(b["release-date"]) - new Date(a["release-date"]);
 					});
@@ -188,7 +186,12 @@
                         />
                         <div class="card-body">
                             <h2 class="card-title fs-5 fs-md-4">${project.name}</h2>
-                            <p class="text-muted small">Released: ${project["release-date"]}</p>
+                            <p class="lang-pt-br text-muted small" style="display: none">
+                                Lançamento: ${project["release-date"]}
+                            </p>
+							<p class="lang-en text-muted small">
+								Released: ${project["release-date"]}
+                            </p>
                             <p
                                 class="lang-pt-br card-text fs-6 fs-md-5"
                                 style="display: none"
