@@ -125,9 +125,9 @@ h1:not(#nome-intro) {
 
 #language-switcher {
 	margin-top: 10px;
-  border: 1px solid #e15e6e;
-  background-color: #c3e6d4;
-  border-radius: 5px;
+	border: 1px solid #e15e6e;
+	background-color: #c3e6d4;
+	border-radius: 5px;
 }
 
 .card-img-top {
@@ -149,7 +149,7 @@ h1:not(#nome-intro) {
 		max-height: 50vh;
 	}
 }
-.page-control{
+.page-control {
 	background-color: #c3e6d4 !important;
 	transition: all 0.3s ease;
 }
