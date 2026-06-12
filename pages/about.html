@@ -42,10 +42,7 @@
 	<!--? ==================== HEADER ==================== -->
 	<div id="header-container" class="container">
 		<header class="row">
-			<a
-				class="fs-4 col-6 logo redish-text"
-				href="/index.html"
-			>
+			<a class="fs-4 col-6 logo redish-text" href="/index.html">
 				<img
 					height="35px"
 					width="35px"
@@ -185,17 +182,5 @@
 		</address>
 	</footer>
 	<!--? ==================== SCRIPTS ==================== -->
-		<script>
-			document
-				.getElementById("language-switcher")
-				.addEventListener("change", function () {
-					const lang = this.value;
-					document
-						.querySelectorAll(".lang-en, .lang-pt-br")
-						.forEach((el) => (el.style.display = "none"));
-					document
-						.querySelectorAll(".lang-" + lang)
-						.forEach((el) => (el.style.display = "block"));
-				});
-		</script>
+	<script src="/scripts/setLanguage.js"></script>
 </html>
