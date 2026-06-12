@@ -31,12 +31,12 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 		<!--? ==================== OUTROS ==================== -->
-		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="/styles/style.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Bagel+Fat+One&family=Delius&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="icon" type="image/png" sizes="32x32" href="img/siteIcon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/siteIcon.png" />
 	</head>
 
 	<body>
@@ -45,13 +45,12 @@
 			<header class="row">
 				<a
 					class="fs-4 col-6 logo redish-text"
-					href="#home"
-					onclick="trocarMain('home')"
+					href="/index.html"
 				>
 					<img
 						height="35px"
 						width="35px"
-						src="img/siteIcon.png"
+						src="/img/siteIcon.png"
 						alt="Assinatura da Lyam como logo do portfólio"
 				/></a>
 				<nav class="col-6" role="navigation">
@@ -87,51 +86,104 @@
 				</nav>
 			</header>
 		</div>
-		<!--? ==================== SCREEN 1 - INDEX ==================== -->
-		<main id="home" class="container w-100">
-			<article id="intro" class="row align-items-center h-80vh">
-				<section id="greet">
-					<div
-						class="rounded-circle text-center d-flex flex-column align-items-center justify-content-center index-circle"
-					>
-						<h1 id="nome-intro" class="lang-pt-br" style="display: none">
-							Aqui é a Lyam!
-						</h1>
-						<h2 class="lang-pt-br" style="display: none">Game e Web Dev</h2>
-
-						<h1 id="nome-intro" class="lang-en">Hi, I'm Lyam!</h1>
-						<h2 class="lang-en">Game and Web Dev</h2>
+		<!--? ==================== SCREEN 3 - PROJECTS ==================== -->
+		<main id="projects" class="container w-100">
+			<article id="geral-projects" class="row">
+				<section id="cards-projects">
+					<h1 class="lang-pt-br" style="display: none">Projetos</h1>
+					<h1 class="lang-en">Projects</h1>
+					<hr class="redish-border-1px" />
+					<div class="container">
+						<div
+							id="card-group"
+							class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+						>
+							<div class="col">
+								<div class="card flex-fill">
+									<img
+										src="/img/card1.jpeg"
+										class="card-img-top object-fit-cover max-h-25vh"
+										style="max-height: 50vh"
+										alt="Placeholder para o projeto 1"
+									/>
+									<div class="card-body">
+										<h2 class="card-title fs-5 fs-md-4">Lattemático</h2>
+										<p
+											class="lang-pt-br card-text fs-6 fs-md-5"
+											style="display: none"
+										>
+											Desenvolvido em grupo para uma Gamejam realizada na
+											faculdade com o objetivo de ensinar vestibulandos
+											matemática de uma forma dinâmica e divertida.
+										</p>
+										<p class="lang-en card-text fs-6 fs-md-5">
+											Developed in a group for a Gamejam held at the university
+											with the goal of teaching entrance exam students
+											mathematics in a dynamic and fun way.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card flex-fill">
+									<img
+										src="/img/card2.jpeg"
+										class="card-img-top object-fit-cover max-h-25vh"
+										style="max-height: 50vh"
+										alt="Placeholder para o projeto 2"
+									/>
+									<div class="card-body">
+										<h2 class="card-title fs-5 fs-md-4">Mental Kombat</h2>
+										<p
+											class="lang-pt-br card-text fs-6 fs-md-5"
+											style="display: none"
+										>
+											Segundo jogo desenvolvido para outra edição da mesma
+											Gamejam, com o objetivo de ensinar crianças a calcular
+											matemática mentalmente, sem o auxílio de papel ou
+											calculadora.
+										</p>
+										<p class="lang-en card-text fs-6 fs-md-5">
+											Second game developed for another edition of the same
+											Gamejam, with the goal of teaching children to calculate
+											mathematics mentally, without the help of paper or
+											calculator.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 				<section
 					class="buttons d-flex gap-3 flex-wrap justify-content-center mt-5 mb-3"
 				>
 					<a
-					class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-					style="display: none"
-					href="/pages/about.html"
-				>
-					Sobre
-				</a>
-				<a
-					class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-					style="display: none"
-					href="/pages/projects.html"
-				>
-					Projetos
-				</a>
-				<a
-					class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-					href="/pages/about.html"
-				>
-					About
-				</a>
-				<a
-					class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-					href="/pages/projects.html"
-				>
-					Projects
-				</a>
+						class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						style="display: none"
+						href="/index.html"
+					>
+						Inicio
+					</a>
+					<a
+						class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						style="display: none"
+						href="/pages/about.html"
+					>
+						Sobre
+					</a>
+					<a
+						class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						href="/index.html"
+					>
+						Home
+					</a>
+					<a
+						class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						href="/pages/about.html"
+					>
+						About
+					</a>
 				</section>
 			</article>
 		</main>
