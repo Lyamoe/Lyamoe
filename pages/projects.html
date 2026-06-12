@@ -148,7 +148,7 @@
 		<script>
 			async function loadProjects() {
 				try {
-					const response = await fetch("/data/projects.json");
+					const response = await fetch("../data/projects.json");
 					if (!response.ok) {
 						throw new Error(`HTTP error! status: ${response.status}`);
 					}
@@ -160,43 +160,46 @@
 						return new Date(b["release-date"]) - new Date(a["release-date"]);
 					});
 
-					// 2. Map over the sorted array to generate HTML
 					const cardsHTML = sortedProjects
 						.map((project) => {
 							return `
-                <a class="project-card col" href="${project["link"]}" target="_blank">
-                    <div class="card flex-fill">
-                        <img
-                            src="${project["banner-image"]}"
-                            class="card-img-top object-fit-cover max-h-25vh"
-                            style="max-height: 50vh"
-                            alt="${project["banner-image-alt"]}"
-                        />
-                        <div class="card-body">
-                            <h2 class="card-title fs-5 fs-md-4">${project.name}</h2>
-                            <p class="lang-pt-br text-muted small" style="display: none">
-                                Lançamento: ${project["release-date"]}
-                            </p>
-							<p class="lang-en text-muted small">
-								Released: ${project["release-date"]}
-                            </p>
-                            <p
-                                class="lang-pt-br card-text fs-6 fs-md-5"
-                                style="display: none"
-                            >
-                                ${project["description-pt-br"]}
-                            </p>
-                            <p class="lang-en card-text fs-6 fs-md-5">
-                                ${project["description-en"]}
-                            </p>
+                    <a class="project-card col" href="${project["link"]}" target="_blank">
+                        <div class="card flex-fill">
+                            <img
+                                src="${project["banner-image"]}"
+                                class="card-img-top object-fit-cover max-h-25vh"
+                                style="max-height: 50vh"
+                                alt="${project["banner-image-alt"] || "Project image"}"
+                            />
+                            <div class="card-body">
+                                <h2 class="card-title fs-5 fs-md-4">${project.name}</h2>
+                                <p class="lang-pt-br text-muted small" style="display: none">
+                                    Lançamento: ${project["release-date"]}
+                                </p>
+                                <p class="lang-en text-muted small">
+                                    Released: ${project["release-date"]}
+                                </p>
+                                <p
+                                    class="lang-pt-br card-text fs-6 fs-md-5"
+                                    style="display: none"
+                                >
+                                    ${project["description-pt-br"]}
+                                </p>
+                                <p class="lang-en card-text fs-6 fs-md-5">
+                                    ${project["description-en"]}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            `;
+                    </a>
+                `;
 						})
 						.join("");
 
 					container.innerHTML = cardsHTML;
+
+					if (typeof setLanguage === "function") {
+						setLanguage(currentLang);
+					}
 				} catch (error) {
 					console.error("Could not load projects:", error);
 				}
