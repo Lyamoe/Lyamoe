@@ -6,7 +6,7 @@
         "description-pt-br": "Desenvolvido em grupo para a Gamejam Fatec São Sebastião realizada na faculdade com o objetivo de ensinar vestibulandos matemática de uma forma dinâmica e divertida.",
         "description-en": "Developed in a group for the Gamejam Fatec São Sebastião held at the university with the goal of teaching entrance exam students mathematics in a dynamic and fun way.",
         "banner-image": "../img/lattematico-banner.png",
-        "banner-image-alt": "Imagem placeholder do projeto Lattemático",
+        "banner-image-alt": "Main menu background of the game Lattemático, showing the character Latte, a white haired person wearing a red cape, standing in front of a brick made tower.",
         "link": "https://github.com/Jogint/lattematico"
         },
         {
@@ -15,7 +15,7 @@
         "description-pt-br": "Portfólio pessoal criado para demonstrar minhas habilidades e projetos desenvolvidos ao longo da minha jornada como desenvolvedor.",
         "description-en": "Personal portfolio created to showcase my skills and projects developed throughout my journey as a developer.",
         "banner-image": "../img/portfolio-banner.png",
-        "banner-image-alt": "Imagem placeholder do projeto My personal portfolio",
+        "banner-image-alt": "The main page of the portfolio, showing Lyam's name in the center inside a pink circle and a navigation bar at the top with links to the Home, Projects and About pages.",
         "link": "https://lyamoe.github.io/Lyamoe/"
         },
         {
@@ -24,7 +24,7 @@
         "description-pt-br": "Segundo jogo desenvolvido para outra edição da Gamejam Fatec São Sebastião, com o objetivo de ensinar crianças a calcular matemática mentalmente, sem o auxílio de papel ou calculadora.",
         "description-en": "Second game developed for another edition of the Gamejam Fatec São Sebastião, with the goal of teaching children to calculate mathematics mentally, without the help of paper or calculator.",
         "banner-image": "../img/mental-kombat-banner.png",
-        "banner-image-alt": "Imagem placeholder do projeto Mental Kombat",
+        "banner-image-alt": "The main menu screen of the game Mental Kombat, showing a checkered background with the game logo and 3 buttons below it, with the options: game modes, difficulty and play.",
         "link": "https://chuumelabs.itch.io/mental-kombat-alpha"
         }
     ]
