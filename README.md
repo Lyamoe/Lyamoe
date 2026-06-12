@@ -4,8 +4,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=ff3366&center=true&vCenter=true&width=450&lines=System+Analysis+%26+Development+Student;Game+Developer;Artist+%26+Storywriter" alt="Typing SVG" />
 </p>
 
----
-
 ## 💫 About Me
 
 I'm **Lyam**! Currently creating projects in different paths to improve in different categories. My current goal is to release a public project.
@@ -14,7 +12,7 @@ I'm **Lyam**! Currently creating projects in different paths to improve in diffe
 - **Pronouns:** he/they/she
 - **Current Focus:** Leveling up backend skills
 
-More of myself on my [portfolio](https://lyamoe.github.io/Lyamoe/)
+> 👉 **Discover more of my projects on my [Portfolio Website](https://lyamoe.github.io/Lyamoe/)!**
 
 ---
 
@@ -42,20 +40,6 @@ More of myself on my [portfolio](https://lyamoe.github.io/Lyamoe/)
   <img src="https://img.shields.io/badge/GameMaker-000000?style=for-the-badge&logo=gamemaker&logoColor=white" />
   <img src="https://img.shields.io/badge/Roblox_Studio-00A2FF?style=for-the-badge&logo=roblox&logoColor=white" />
 </p>
-
----
-
-## 🎮 My projects
-
-### Individual creations
-
-* **Roblox Games:** Reviving old dreams and working into a project I started at 14 years old with no coding knowledge back then. Currently in active development.
-* **Student Smart TODO list:** As a project for my graduation article, I've been working on a app for smart sorting studies related pendencies by how convenient it would be if you did it now. The goal is to help people never miss a deadline.
-
-### Group creations
-
-* **Game Development:** I created the quest mechanics in [Lattematico](https://github.com/Jogint/lattematico) and did the entire code for [Mental Kombat](https://github.com/Jogint/mental-kombat). You can find more about in [**@Jogint**](https://github.com/Jogint)
-* **Business website dev:** Our first full-scale [website](https://github.com/jobby-team/jobby). Focused on basic database implementation and responsive design. See more in [**@Jobby-team**](https://github.com/jobby-team)
 
 ---
 
