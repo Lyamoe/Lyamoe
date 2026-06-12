@@ -42,7 +42,7 @@
 	<body>
 		<!--? ==================== HEADER ==================== -->
 		<div id="header-container" class="container">
-			header class="row">
+			<header class="row">
 				<a class="fs-4 col-6 logo redish-text" href="../index.html">
 					<img
 						height="35px"
@@ -160,7 +160,7 @@
 		<script>
 			async function loadProjects() {
 				try {
-					const response = await fetch("/data/projects.json");
+					const response = await fetch("../data/projects.json");
 					if (!response.ok) {
 						throw new Error(`HTTP error! status: ${response.status}`);
 					}

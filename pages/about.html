@@ -36,16 +36,18 @@
 			href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Bagel+Fat+One&family=Delius&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="icon" type="image/png" sizes="32x32" href="../img/siteIcon.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../img/siteIcon.png"
+		/>
 	</head>
 
 	<!--? ==================== HEADER ==================== -->
 	<div id="header-container" class="container">
 		<header class="row">
-			<a
-				class="fs-4 col-6 logo redish-text"
-				href="../index.html"
-			>
+			<a class="fs-4 col-6 logo redish-text" href="../index.html">
 				<img
 					height="35px"
 					width="35px"
@@ -185,17 +187,17 @@
 		</address>
 	</footer>
 	<!--? ==================== SCRIPTS ==================== -->
-		<script>
-			document
-				.getElementById("language-switcher")
-				.addEventListener("change", function () {
-					const lang = this.value;
-					document
-						.querySelectorAll(".lang-en, .lang-pt-br")
-						.forEach((el) => (el.style.display = "none"));
-					document
-						.querySelectorAll(".lang-" + lang)
-						.forEach((el) => (el.style.display = "block"));
-				});
-		</script>
+	<script>
+		document
+			.getElementById("language-switcher")
+			.addEventListener("change", function () {
+				const lang = this.value;
+				document
+					.querySelectorAll(".lang-en, .lang-pt-br")
+					.forEach((el) => (el.style.display = "none"));
+				document
+					.querySelectorAll(".lang-" + lang)
+					.forEach((el) => (el.style.display = "block"));
+			});
+	</script>
 </html>
