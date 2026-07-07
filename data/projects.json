@@ -26,6 +26,15 @@
         "banner-image": "../img/mental-kombat-banner.png",
         "banner-image-alt": "The main menu screen of the game Mental Kombat, showing a checkered background with the game logo and 3 buttons below it, with the options: game modes, difficulty and play.",
         "link": "https://chuumelabs.itch.io/mental-kombat-alpha"
+        },
+        {
+        "name": "Bunnit",
+        "release-date": "2026-07-07",
+        "description-pt-br": "Site de calculadoras de saúde, desenvolvido como aprendizado de javascript modular, visando reutilização de código e manuteabilidade.",
+        "description-en": "A health calculator website, developed as a modular Javascript learning tool, aiming for code reuse and maintainability.",
+        "banner-image": "../img/bunnit-banner.png",
+        "banner-image-alt": "Landing page of the Bunnit website, showing all the current calculators in the website and pros of using it.",
+        "link": "https://lyamoe.github.io/Bunnit/index.html"
         }
     ]
 }
