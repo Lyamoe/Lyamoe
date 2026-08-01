@@ -2,13 +2,14 @@
 
 ## 🚨 High priority
 
-* [ ] Refactor projects insert function (currently not working)
+* [ ] Keep the language selector persistent through pages
 * [ ] fix the body sizing in about section
 
 ## 🛠️ Medium priority
 
 * [ ] Change the website main font to a better readable one
 * [ ] Missing Title translations in head
+* [ ] Give eng translations to projects that need it
 
 ## 💤 Low priority
 
@@ -25,3 +26,4 @@
 * [x] Fix Duplicate ID id="nome-intro"
 * [x] Fix broken elements on language switch (use .d-none and .d-block classes)
 * [x] Add a english version of the mailto button
+* [x] Refactor projects insert function

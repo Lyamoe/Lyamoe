@@ -1,5 +1,6 @@
 import { ptBR } from "../data/locales/pt-BR.js";
 import { en } from "../data/locales/en.js";
+import { insertProjects } from "./insertProjects.js";
 
 const translations = {
 	ptBR,
@@ -7,32 +8,36 @@ const translations = {
 };
 
 export function initLanguageController(pageName) {
-	const languageSelect = document.getElementById("language-switcher");
+  const languageSelect = document.getElementById("language-switcher");
 
-	if (!languageSelect) {
-		console.warn("Language switcher element not found in DOM.");
-		return;
-	}
+  if (!languageSelect) {
+    console.warn("Language switcher element not found in DOM.");
+    return;
+  }
 
-	languageSelect.addEventListener("change", (event) => {
-		const selectedLang = event.target.value;
-		const selectedTranslations = translations[selectedLang];
+  let selectedLang = "ptBR";
 
-		if (!selectedTranslations) {
-			console.error(`Selected language key "${selectedLang}" was not found.`);
-			return;
-		}
+  //? Initial Sync: save default state from HTML dropdown
+  selectedLang = languageSelect.value;
+  const initialTranslations = translations[selectedLang] || translations.ptBR;
+  updatePageContent(initialTranslations, pageName, selectedLang);
 
-		updatePageContent(selectedTranslations, pageName);
-	});
+  //? Change Event: update state when dropdown changes
+  languageSelect.addEventListener("change", (event) => {
+    const newLang = event.target.value;
 
-	// Initial load sync
-	const currentLang = languageSelect.value;
-	const initialTranslations = translations[currentLang] || translations.ptBR;
-	updatePageContent(initialTranslations, pageName);
+    if (!translations[newLang]) {
+      console.error(`Selected language key "${newLang}" was not found.`);
+      return;
+    }
+
+    selectedLang = newLang;
+
+    updatePageContent(translations[selectedLang], pageName, selectedLang);
+  });
 }
 
-export function updatePageContent(texts, currentPage) {
+function updatePageContent(texts, currentPage, lang) {
 	updateHeader(texts.header);
 	updateButtons(texts.pageButtons);
 	updateFooter(texts.footer);
@@ -45,7 +50,7 @@ export function updatePageContent(texts, currentPage) {
 			updateAboutPage(texts.about);
 			break;
 		case "projects":
-			updateProjectsPage(texts.projects);
+			updateProjectsPage(texts.projects, lang);
 			break;
 		default:
 			console.error(`The page ${currentPage} does not exist in the project`);
@@ -90,10 +95,11 @@ function updateAboutPage(aboutTexts) {
     if (bannerImage) bannerImage.setAttribute("alt", aboutTexts.bannerAlt);
 }
 
-function updateProjectsPage(projectTexts) {
+function updateProjectsPage(projectTexts, lang) {
 	const titleText = document.getElementById("title");
 
 	if (titleText) titleText.innerText = projectTexts.title;
+	insertProjects(lang); //* update the language and add them
 }
 
 function updateFooter(footerTexts) {
