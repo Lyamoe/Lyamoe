@@ -50,6 +50,7 @@
 				<img
 					height="35px"
 					width="35px"
+					id="site-icon"
 					src="../img/siteIcon.png"
 					alt="Assinatura da Lyam como logo do portfólio"
 			/></a>
@@ -57,17 +58,18 @@
 				<ul class="nav justify-content-end">
 					<li class="nav-item">
 						<select id="language-switcher">
-							<option value="en" selected>English</option>
-							<option value="pt-br">Português</option>
+							<option value="ptBR" selected>Português</option>
+							<option value="en">English</option>
 						</select>
 					</li>
 					<li class="nav-item">
 						<a
 							class="fs-4 nav-link redish-text"
+							id="linkedin"
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label="LinkedIn de Lyam Santos Peres"
-							href="https://www.linkedin.com/in/karine-santos-peres/"
+							href="https://www.linkedin.com/in/lyamoe/"
 						>
 							<i class="fa-brands fa-linkedin-in"></i>
 						</a>
@@ -75,10 +77,11 @@
 					<li class="nav-item">
 						<a
 							class="fs-4 nav-link redish-text"
+							id="email"
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label="Enviar e-mail para Lyam Santos Peres"
-							href="https://mail.google.com/mail/?view=cm&to=karinesanper@gmail.com&su=Contate%20Lyam&body=Eu%20vi%20seu%20portfólio."
+							href="https://mail.google.com/mail/?view=cm&to=lyamoesp@gmail.com&su=Contate%20Lyam&body=Eu%20vi%20seu%20portfólio."
 							><i class="fa-solid fa-envelope"></i
 						></a>
 					</li>
@@ -90,35 +93,20 @@
 		<article id="geral-about" class="row">
 			<section id="text-about" class="container">
 				<div class="row">
-					<h1 class="lang-en">About Me</h1>
-					<h1 class="lang-pt-br" style="display: none">Sobre mim</h1>
+					<h1 id="about-me">Sobre mim</h1>
 					<hr class="redish-border-1px" />
 				</div>
 				<div class="row m-3">
 					<div
 						class="green-text-box col-12 col-md-9 rounded-3 d-flex align-items-center"
 					>
-						<p
-							class="lang-pt-br fs-5 p-2 text-justify"
-							id="self-description"
-							style="display: none"
-						>
+						<p class="fs-5 p-2 text-justify" id="self-description">
 							Eu me chamo Lyam, um estudante de Análise e Desenvolvimento de
 							Sistemas (ADS) na Fatec e que tenho trabalhado em projects de
 							programação de jogos e front-end desde os 14 anos de idade. Para
 							criações desktop, já trabalhei com conjunto Web (HTML, CSS,
 							JavaScript), assim como Java, PHP e Python; enquanto para jogos,
 							tenho criações próprias feitas no GameMaker (gml) e no Roblox
-							(LUA).
-						</p>
-
-						<p class="lang-en fs-5 p-2 text-justify" id="self-description-en">
-							My name is Lyam, a student of Systems Analysis and Development
-							(ADS) at Fatec, and I have been working on game development and
-							front-end projects since I was 14 years old. For desktop
-							creations, I have worked with web technologies (HTML, CSS,
-							JavaScript), as well as Java, PHP, and Python; while for games, I
-							have created my own projects using GameMaker (gml) and Roblox
 							(LUA).
 						</p>
 					</div>
@@ -128,9 +116,9 @@
 					>
 						<img
 							class="rounded-circle align-self-center"
-							id="profile"
+							id="profile-picture"
 							src="../img/pfp.jpg"
-							alt="A childish drawing of Lyam, with red hair, glasses, a gray shirt and a big smile, inside a white circle"
+							alt="A drawing of Lyam, with red hair, glasses, a gray shirt and a big smile, inside a white circle"
 						/>
 					</figure>
 				</div>
@@ -146,45 +134,35 @@
 				class="buttons d-flex gap-3 flex-wrap justify-content-center mt-5 mb-3"
 			>
 				<a
-					class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-					style="display: none"
+					class="page-control btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+					id="index-btn"
 					href="../index.html"
 				>
 					Inicio
 				</a>
 				<a
-					class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-					style="display: none"
+					class="page-control btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+					id="projects-btn"
 					href="projects.html"
 				>
 					Projetos
-				</a>
-				<a
-					class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-					href="../index.html"
-				>
-					Home
-				</a>
-				<a
-					class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-					href="projects.html"
-				>
-					Projects
 				</a>
 			</section>
 		</article>
 	</main>
 	<!--? ==================== FOOTER ==================== -->
 	<footer class="text-center">
-		<address class="lang-pt-br redish-text" style="display: none">
-			Portfólio por © Lyamoe <br />
-			Entre em contato!
-		</address>
-		<address class="lang-en redish-text">
-			Portfolio by © Lyamoe <br />
-			Contact me!
+		<address class="redish-text">
+			<p id="copyright">Portfólio por © Lyamoe</p>
+			<p id="call-to-contact">Entre em contato!</p>
 		</address>
 	</footer>
 	<!--? ==================== SCRIPTS ==================== -->
-	<script src="/scripts/setLanguage.js"></script>
+	<script type="module">
+		import { initLanguageController } from "../scripts/setLanguage.js";
+
+		document.addEventListener("DOMContentLoaded", () => {
+			initLanguageController("about");
+		});
+	</script>
 </html>

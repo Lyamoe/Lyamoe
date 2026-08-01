@@ -43,14 +43,11 @@
 		<!--? ==================== HEADER ==================== -->
 		<div id="header-container" class="container">
 			<header class="row">
-				<a
-					class="fs-4 col-6 logo redish-text"
-					href="#home"
-					onclick="trocarMain('home')"
-				>
+				<a class="fs-4 col-6 logo redish-text" href="#index">
 					<img
 						height="35px"
 						width="35px"
+						id="site-icon"
 						src="img/siteIcon.png"
 						alt="Assinatura da Lyam como logo do portfólio"
 				/></a>
@@ -58,17 +55,18 @@
 					<ul class="nav justify-content-end">
 						<li class="nav-item">
 							<select id="language-switcher">
-								<option value="en" selected>English</option>
-								<option value="pt-br">Português</option>
+								<option value="ptBR" selected>Português</option>
+								<option value="en">English</option>
 							</select>
 						</li>
 						<li class="nav-item">
 							<a
 								class="fs-4 nav-link redish-text"
+								id="linkedin"
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="LinkedIn de Lyam Santos Peres"
-								href="https://www.linkedin.com/in/karine-santos-peres/"
+								href="https://www.linkedin.com/in/lyamoe/"
 							>
 								<i class="fa-brands fa-linkedin-in"></i>
 							</a>
@@ -76,10 +74,11 @@
 						<li class="nav-item">
 							<a
 								class="fs-4 nav-link redish-text"
+								id="email"
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="Enviar e-mail para Lyam Santos Peres"
-								href="https://mail.google.com/mail/?view=cm&to=karinesanper@gmail.com&su=Contate%20Lyam&body=Eu%20vi%20seu%20portfólio."
+								href="https://mail.google.com/mail/?view=cm&to=lyamoesp@gmail.com&su=Contate%20Lyam&body=Eu%20vi%20seu%20portfólio."
 								><i class="fa-solid fa-envelope"></i
 							></a>
 						</li>
@@ -88,65 +87,50 @@
 			</header>
 		</div>
 		<!--? ==================== SCREEN 1 - INDEX ==================== -->
-		<main id="home" class="container w-100">
+		<main id="index" class="container w-100">
 			<article id="intro" class="row align-items-center h-80vh">
 				<section id="greet">
 					<div
 						class="rounded-circle text-center d-flex flex-column align-items-center justify-content-center index-circle"
 					>
-						<h1 id="nome-intro" class="lang-pt-br" style="display: none">
-							Aqui é a Lyam!
-						</h1>
-						<h2 class="lang-pt-br" style="display: none">Game e Web Dev</h2>
-
-						<h1 id="nome-intro" class="lang-en">Hi, I'm Lyam!</h1>
-						<h2 class="lang-en">Game and Web Dev</h2>
+						<h1 id="intro-title">Aqui é a Lyam!</h1>
+						<h2 id="subtitle">Game e Web Dev</h2>
 					</div>
 				</section>
 				<section
 					class="buttons d-flex gap-3 flex-wrap justify-content-center mt-5 mb-3"
 				>
 					<a
-					class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-					style="display: none"
-					href="pages/about.html"
-				>
-					Sobre
-				</a>
-				<a
-					class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-					style="display: none"
-					href="pages/projects.html"
-				>
-					Projetos
-				</a>
-				<a
-					class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-					href="pages/about.html"
-				>
-					About
-				</a>
-				<a
-					class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-					href="pages/projects.html"
-				>
-					Projects
-				</a>
+						class="page-control btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						id="about-btn"
+						href="pages/about.html"
+					>
+						Sobre
+					</a>
+					<a
+						class="page-control btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						id="projects-btn"
+						href="pages/projects.html"
+					>
+						Projetos
+					</a>
 				</section>
 			</article>
 		</main>
 		<!--? ==================== FOOTER ==================== -->
 		<footer class="text-center">
-			<address class="lang-pt-br redish-text" style="display: none">
-				Portfólio por © Lyamoe <br />
-				Entre em contato!
-			</address>
-			<address class="lang-en redish-text">
-				Portfolio by © Lyamoe <br />
-				Contact me!
+			<address class="redish-text">
+				<p id="copyright">Portfólio por © Lyamoe</p>
+				<p id="call-to-contact">Entre em contato!</p>
 			</address>
 		</footer>
 		<!--? ==================== SCRIPTS ==================== -->
-		<script src="/scripts/setLanguage.js"></script>
+		<script type="module">
+			import { initLanguageController } from "/scripts/setLanguage.js";
+
+			document.addEventListener("DOMContentLoaded", () => {
+				initLanguageController("index");
+			});
+		</script>
 	</body>
 </html>
