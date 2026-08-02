@@ -1,4 +1,8 @@
 export const ptBR = {
+	head: {
+		title: "Portfolio de Lyamoe",
+		metaDescription: "Conheça Lyam, suas habilidades e seus projetos."
+	},
 	header: {
 		logoAlt: "Assinatura da Lyam como logo do portfólio",
 		linkedinAriaLabel: "LinkedIn de Lyamoe",
@@ -23,7 +27,7 @@ export const ptBR = {
 		title: "Projetos",
 	},
 	footer: {
-		copyright: "Portfólio por © Lyamoe",
+		copyright: "Portfólio © Lyamoe",
 		contactCall: "Entre em contato!",
 	},
 	pageButtons: {

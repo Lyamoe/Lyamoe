@@ -6,7 +6,6 @@
 
 ## 🛠️ Medium priority
 
-* [ ] Missing Title translations in head
 * [ ] Give eng translations to project names that need it
 
 ## 💤 Low priority
@@ -27,4 +26,6 @@
 * [x] Refactor projects insert function
 * [x] Keep the language selector persistent through pages
 * [x] Change the website main font to a better readable one
-* [x] fix the body sizing in about section
+* [x] Fix the body sizing in about section
+* [x] Add testing for language files
+* [x] Missing Title translations in head

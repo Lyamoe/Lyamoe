@@ -1,4 +1,8 @@
 export const en = {
+	head: {
+		title: "Lyam's portfolio",
+		metaDescription: "Meet Lyam, her abilities and her projects."
+	},
 	header: {
 		logoAlt: "Lyam's signature as portfolio logo",
 		linkedinAriaLabel: "Lyamoe's LinkedIn",
@@ -17,7 +21,7 @@ export const en = {
 		pfpAlt:
 			"A self-portrait of Lyam with red hair, glasses, a gray shirt, and a big smile, inside a white circle",
 		bannerAlt:
-			"Banner for the 'About' section, featuring several pink-toned stripes",
+			"Banner for the 'About' section, featuring several stripes in shades of pink.",
 	},
 	projects: {
 		title: "Projects",
@@ -27,7 +31,7 @@ export const en = {
 		contactCall: "Get in touch!",
 	},
 	pageButtons: {
-		index: "index",
+		index: "Index",
 		about: "About",
 		projects: "Projects",
 	},

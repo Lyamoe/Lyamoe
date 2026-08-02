@@ -45,6 +45,7 @@ export function initLanguageController(pageName) {
 }
 
 function updatePageContent(texts, currentPage, lang) {
+	updateHead(texts.head);
 	updateHeader(texts.header);
 	updateButtons(texts.pageButtons);
 	updateFooter(texts.footer);
@@ -66,79 +67,102 @@ function updatePageContent(texts, currentPage, lang) {
 	updateNavigationLinks(lang);
 }
 
-function updateHeader(headerTexts) {
+function updateHead(texts) {
+	document.title = texts.title;
+	setMetaTag("description", texts.metaDescription);
+	setMetaTag("og:title", texts.title);
+	setMetaTag("og:description", texts.metaDescription);
+}
+
+function updateHeader(texts) {
 	const siteIcon = document.getElementById("site-icon");
 	const linkedinIcon = document.getElementById("linkedin");
 	const emailIcon = document.getElementById("email");
 
-	if (siteIcon) siteIcon.alt = headerTexts.logoAlt;
+	if (siteIcon) siteIcon.alt = texts.logoAlt;
 
 	if (linkedinIcon)
-		linkedinIcon.setAttribute("aria-label", headerTexts.linkedinAriaLabel);
+		linkedinIcon.setAttribute("aria-label", texts.linkedinAriaLabel);
 
 	if (emailIcon) {
-		emailIcon.setAttribute("aria-label", headerTexts.emailAriaLabel);
+		emailIcon.setAttribute("aria-label", texts.emailAriaLabel);
 
-		const subject = encodeURIComponent(headerTexts.emailSubject);
-		const body = encodeURIComponent(headerTexts.emailBody);
+		const subject = encodeURIComponent(texts.emailSubject);
+		const body = encodeURIComponent(texts.emailBody);
 		emailIcon.href = `https://mail.google.com/mail/?view=cm&to=lyamoesp@gmail.com&su=${subject}&body=${body}`;
 	}
 }
 
-function updateIndexPage(indexTexts) {
+function updateIndexPage(texts) {
 	const introText = document.getElementById("intro-title");
 	const subtitleText = document.getElementById("subtitle");
 
-	if (introText) introText.innerText = indexTexts.title;
-	if (subtitleText) subtitleText.innerText = indexTexts.subtitle;
+	if (introText) introText.innerText = texts.title;
+	if (subtitleText) subtitleText.innerText = texts.subtitle;
 }
 
-function updateAboutPage(aboutTexts) {
+function updateAboutPage(texts) {
 	const titleText = document.getElementById("about-me");
 	const aboutText = document.getElementById("self-description");
 	const pfpImage = document.getElementById("profile-picture");
 	const bannerImage = document.getElementById("banner-about");
 
-	if (titleText) titleText.innerText = aboutTexts.title;
-	if (aboutText) aboutText.innerText = aboutTexts.descText;
-	if (pfpImage) pfpImage.setAttribute("alt", aboutTexts.pfpAlt);
-	if (bannerImage) bannerImage.setAttribute("alt", aboutTexts.bannerAlt);
+	if (titleText) titleText.innerText = texts.title;
+	if (aboutText) aboutText.innerText = texts.descText;
+	if (pfpImage) pfpImage.setAttribute("alt", texts.pfpAlt);
+	if (bannerImage) bannerImage.setAttribute("alt", texts.bannerAlt);
 }
 
-function updateProjectsPage(projectTexts, lang) {
+function updateProjectsPage(texts, lang) {
 	const titleText = document.getElementById("title");
 
-	if (titleText) titleText.innerText = projectTexts.title;
+	if (titleText) titleText.innerText = texts.title;
 	insertProjects(lang); //* update the language and add them
 }
 
-function updateFooter(footerTexts) {
+function updateFooter(texts) {
 	const copyrightText = document.getElementById("copyright");
 	const ctcText = document.getElementById("call-to-contact");
 
-	if (copyrightText) copyrightText.innerText = footerTexts.copyright;
-	if (ctcText) ctcText.innerText = footerTexts.contactCall;
+	if (copyrightText) copyrightText.innerText = texts.copyright;
+	if (ctcText) ctcText.innerText = texts.contactCall;
 }
 
-function updateButtons(buttonTexts) {
+function updateButtons(texts) {
 	const indexBtn = document.getElementById("index-btn");
 	const aboutBtn = document.getElementById("about-btn");
 	const projectsBtn = document.getElementById("projects-btn");
 
-	if (indexBtn) indexBtn.innerText = buttonTexts.index;
-	if (aboutBtn) aboutBtn.innerText = buttonTexts.about;
-	if (projectsBtn) projectsBtn.innerText = buttonTexts.projects;
+	if (indexBtn) indexBtn.innerText = texts.index;
+	if (aboutBtn) aboutBtn.innerText = texts.about;
+	if (projectsBtn) projectsBtn.innerText = texts.projects;
 }
 
-function updateNavigationLinks(currentLang) {
+function updateNavigationLinks(currLang) {
 	const links = document.querySelectorAll("a.page-control");
 
 	links.forEach((link) => {
 		const url = new URL(link.getAttribute("href"), window.location.href);
 
-		url.searchParams.set("lang", currentLang);
+		url.searchParams.set("lang", currLang);
 
 		// Update the href attribute with relative pathname + new search params
 		link.setAttribute("href", `${url.pathname}${url.search}`);
 	});
+}
+
+function setMetaTag(property, content) {
+	if (!content) return;
+
+	// Look for an existing tag
+	let element = document.querySelector(`meta[property="${property}"]`);
+
+	// If it doesn't exist, create one and append it to <head>
+	if (!element) {
+		element = document.createElement("meta");
+		element.setAttribute("property", property);
+		document.head.appendChild(element);
+	}
+
+	element.setAttribute("content", content);
 }
