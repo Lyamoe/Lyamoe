@@ -42,6 +42,13 @@ export const ptBR = {
 				bannerAlt:
 					"Página inicial do portfólio, mostrando o nome da Lyam no centro dentro de um círculo rosa e uma barra de navegação no topo com links para as páginas Início, Projetos e Sobre.",
 			},
+			magicNums: {
+				name: "Números Mágicos",
+				description:
+					"Participei do projeto da minha amiga dando dicas de programação e criando a arte para as habilidades. O jogo foi lançado na Game Jam Fatec São Sebastião e obteve terceiro lugar.",
+				bannerAlt:
+					"Combate no jogo, mostrando o jogador, o inimigo, suas barras de vida e os poderes que o jogador pode usar",
+			},
 			mentalKombat: {
 				name: "Mental Kombat",
 				description:

@@ -2,7 +2,7 @@
 
 ## 🚨 High priority
 
-> Nothing here currently!
+* [ ] Add stack to projects I've made
 
 ## 🛠️ Medium priority
 

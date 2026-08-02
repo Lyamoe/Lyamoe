@@ -42,6 +42,14 @@ export const en = {
 				bannerAlt:
 					"Homepage of the portfolio, showing Lyam's name in the center inside a pink circle and a navigation bar at the top with links to the Home, Projects, and About pages.",
 			},
+			magicNums: {
+				name: "Magic Nums",
+				description:
+					"I participated in my friend's project by giving programming tips and creating the art for the abilities. The game was launched at the Fatec São Sebastião Game Jam and won third place.",
+
+				bannerAlt:
+					"Combat in the game, showing the player, the enemy, their health bars, and the powers the player can use",
+			},
 			mentalKombat: {
 				name: "Mental Kombat",
 				description:
