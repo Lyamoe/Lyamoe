@@ -2,13 +2,12 @@
 
 ## 🚨 High priority
 
-* [ ] fix the body sizing in about section
+> Nothing here currently!
 
 ## 🛠️ Medium priority
 
-* [ ] Change the website main font to a better readable one
 * [ ] Missing Title translations in head
-* [ ] Give eng translations to projects that need it
+* [ ] Give eng translations to project names that need it
 
 ## 💤 Low priority
 
@@ -27,3 +26,5 @@
 * [x] Add a english version of the mailto button
 * [x] Refactor projects insert function
 * [x] Keep the language selector persistent through pages
+* [x] Change the website main font to a better readable one
+* [x] fix the body sizing in about section
