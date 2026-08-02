@@ -34,8 +34,12 @@
 
 body {
 	background-color: #f4f0e5;
+	background:
+		linear-gradient(rgba(244, 240, 229, 0.9), rgba(244, 240, 229, 0.9)),
+		url("../img/bg.jpg");
 	min-height: -moz-fit-content;
 	min-height: fit-content;
+	font-family: "Mali", "Indie Flower", cursive !important;
 }
 
 h1 {
@@ -49,19 +53,6 @@ h5,
 h6,
 select {
 	font-family: "Delius", cursive;
-}
-
-p,
-button,
-a,
-address {
-	font-family: "Indie Flower", cursive !important;
-}
-
-body {
-	background:
-		linear-gradient(rgba(244, 240, 229, 0.9), rgba(244, 240, 229, 0.9)),
-		url("../img/bg.jpg");
 }
 
 main {
@@ -111,6 +102,7 @@ h1:not(#nome-intro) {
 		margin-left: calc(50% - 220px);
 	}
 }
+
 @media (max-width: 750px) {
 	.index-circle {
 		height: 300px;
@@ -118,7 +110,9 @@ h1:not(#nome-intro) {
 		margin-left: calc(50% - 150px);
 	}
 }
-#profile {
+
+#profile-div,
+#profile-picture {
 	height: 180px;
 	width: 180px;
 }
@@ -172,4 +166,4 @@ h1:not(#nome-intro) {
 	.btn-responsive {
 		width: 40vw;
 	}
-} /*# sourceMappingURL=style.css.map */
+}

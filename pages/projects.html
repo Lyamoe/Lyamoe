@@ -33,7 +33,7 @@
 		<!--? ==================== OUTROS ==================== -->
 		<link rel="stylesheet" href="../styles/style.css" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Bagel+Fat+One&family=Delius&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Bagel+Fat+One&family=Delius&family=Mali:wght@300;400;600;700&display=swap"
 			rel="stylesheet"
 		/>
 		<link
@@ -52,6 +52,7 @@
 					<img
 						height="35px"
 						width="35px"
+						id="site-icon"
 						src="../img/siteIcon.png"
 						alt="Assinatura da Lyam como logo do portfólio"
 				/></a>
@@ -59,17 +60,18 @@
 					<ul class="nav justify-content-end">
 						<li class="nav-item">
 							<select id="language-switcher">
-								<option value="en" selected>English</option>
-								<option value="pt-br">Português</option>
+								<option value="ptBR" selected>Português</option>
+								<option value="en">English</option>
 							</select>
 						</li>
 						<li class="nav-item">
 							<a
 								class="fs-4 nav-link redish-text"
+								id="linkedin"
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="LinkedIn de Lyam Santos Peres"
-								href="https://www.linkedin.com/in/karine-santos-peres/"
+								href="https://www.linkedin.com/in/lyamoe/"
 							>
 								<i class="fa-brands fa-linkedin-in"></i>
 							</a>
@@ -77,10 +79,11 @@
 						<li class="nav-item">
 							<a
 								class="fs-4 nav-link redish-text"
+								id="email"
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="Enviar e-mail para Lyam Santos Peres"
-								href="https://mail.google.com/mail/?view=cm&to=karinesanper@gmail.com&su=Contate%20Lyam&body=Eu%20vi%20seu%20portfólio."
+								href="https://mail.google.com/mail/?view=cm&to=lyamoesp@gmail.com&su=Contate%20Lyam&body=Eu%20vi%20seu%20portfólio."
 								><i class="fa-solid fa-envelope"></i
 							></a>
 						</li>
@@ -92,15 +95,14 @@
 		<main id="projects" class="container w-100">
 			<article id="geral-projects" class="row">
 				<section id="cards-projects">
-					<h1 class="lang-pt-br" style="display: none">Projetos</h1>
-					<h1 class="lang-en">Projects</h1>
+					<h1 id="title">Projetos</h1>
 					<hr class="redish-border-1px" />
 					<div class="container">
 						<div
 							id="card-group"
 							class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
 						>
-							<!-- Cards will be dynamically inserted here -->
+							<!--? Cards will be dynamically inserted here -->
 						</div>
 					</div>
 				</section>
@@ -108,109 +110,36 @@
 					class="buttons d-flex gap-3 flex-wrap justify-content-center mt-5 mb-3"
 				>
 					<a
-						class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-						style="display: none"
+						class="page-control btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
+						id="index-btn"
 						href="../index.html"
 					>
 						Inicio
 					</a>
 					<a
-						class="page-control lang-pt-br btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-						style="display: none"
+						class="page-control btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
+						id="about-btn"
 						href="about.html"
 					>
 						Sobre
-					</a>
-					<a
-						class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-start-5 me-2"
-						href="../index.html"
-					>
-						Home
-					</a>
-					<a
-						class="page-control lang-en btn redish-text redish-border-1px btn-responsive rounded-end-5 ms-2"
-						href="about.html"
-					>
-						About
 					</a>
 				</section>
 			</article>
 		</main>
 		<!--? ==================== FOOTER ==================== -->
 		<footer class="text-center">
-			<address class="lang-pt-br redish-text" style="display: none">
-				Portfólio por © Lyamoe <br />
-				Entre em contato!
-			</address>
-			<address class="lang-en redish-text">
-				Portfolio by © Lyamoe <br />
-				Contact me!
+			<address class="redish-text">
+				<p id="copyright">Portfólio por © Lyamoe</p>
+				<p id="call-to-contact">Entre em contato!</p>
 			</address>
 		</footer>
 		<!--? ==================== SCRIPTS ==================== -->
-		<script src="/scripts/setLanguage.js"></script>
+		<script type="module">
+			import { initLanguageController } from "../scripts/setLanguage.js";
 
-		<script>
-			async function loadProjects() {
-				try {
-					const response = await fetch("../data/projects.json");
-					if (!response.ok) {
-						throw new Error(`HTTP error! status: ${response.status}`);
-					}
-
-					const data = await response.json();
-					const container = document.getElementById("card-group");
-
-					const sortedProjects = data.projects.sort((a, b) => {
-						return new Date(b["release-date"]) - new Date(a["release-date"]);
-					});
-
-					const cardsHTML = sortedProjects
-						.map((project) => {
-							return `
-                    <a class="project-card col" href="${project["link"]}" target="_blank">
-                        <div class="card flex-fill">
-                            <img
-                                src="${project["banner-image"]}"
-                                class="card-img-top object-fit-cover max-h-25vh"
-                                style="max-height: 50vh"
-                                alt="${project["banner-image-alt"] || "Project image"}"
-                            />
-                            <div class="card-body">
-                                <h2 class="card-title fs-5 fs-md-4">${project.name}</h2>
-                                <p class="lang-pt-br text-muted small" style="display: none">
-                                    Lançamento: ${project["release-date"]}
-                                </p>
-                                <p class="lang-en text-muted small">
-                                    Released: ${project["release-date"]}
-                                </p>
-                                <p
-                                    class="lang-pt-br card-text fs-6 fs-md-5"
-                                    style="display: none"
-                                >
-                                    ${project["description-pt-br"]}
-                                </p>
-                                <p class="lang-en card-text fs-6 fs-md-5">
-                                    ${project["description-en"]}
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                `;
-						})
-						.join("");
-
-					container.innerHTML = cardsHTML;
-
-					if (typeof setLanguage === "function") {
-						setLanguage(currentLang);
-					}
-				} catch (error) {
-					console.error("Could not load projects:", error);
-				}
-			}
-
-			document.addEventListener("DOMContentLoaded", loadProjects);
+			document.addEventListener("DOMContentLoaded", () => {
+				initLanguageController("projects");
+			});
 		</script>
 	</body>
 </html>
