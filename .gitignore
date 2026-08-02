@@ -1,4 +1,4 @@
-*.scss
 *.css.map
 *.prettierrc
 **/teste.html
+/node_modules
