@@ -6,7 +6,7 @@
 
 ## 🛠️ Medium priority
 
-* [ ] Give eng translations to project names that need it
+> Nothing here currently!
 
 ## 💤 Low priority
 
@@ -29,3 +29,4 @@
 * [x] Fix the body sizing in about section
 * [x] Add testing for language files
 * [x] Missing Title translations in head
+* [x] Give eng translations to project names that need it
