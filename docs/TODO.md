@@ -2,11 +2,11 @@
 
 ## 🚨 High priority
 
-* [ ] Add stack to projects I've made
+> Nothing here currently!
 
 ## 🛠️ Medium priority
 
-> Nothing here currently!
+* [ ] Filter projects by tech used
 
 ## 💤 Low priority
 
@@ -30,3 +30,4 @@
 * [x] Add testing for language files
 * [x] Missing Title translations in head
 * [x] Give eng translations to project names that need it
+* [x] Add stack to projects I've made

@@ -21,6 +21,12 @@ export function insertProjects(localeTexts) {
 				project.dateFormat,
 			);
 
+			const techUsed = project.techUsed;
+			let techDom = ``;
+			techUsed.forEach((tech) => {
+				techDom += `<span class="badge green-text-box redish-text">${tech}</span>`
+			})
+
 			return `
                     <a class="project-card col" href="${project.link}" target="_blank" rel="noopener noreferrer">
                         <div class="card flex-fill">
@@ -32,6 +38,7 @@ export function insertProjects(localeTexts) {
                             />
                             <div class="card-body">
                                 <h2 class="card-title fs-5 fs-md-4">${project.name}</h2>
+								<div class="d-flex gap-2 m-1">${techDom}</div>
                                 <p class="text-muted small">
                                     ${project.releaseLabel}: ${formattedDate}
                                 </p>
