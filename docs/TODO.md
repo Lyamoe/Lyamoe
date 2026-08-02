@@ -2,7 +2,6 @@
 
 ## 🚨 High priority
 
-* [ ] Keep the language selector persistent through pages
 * [ ] fix the body sizing in about section
 
 ## 🛠️ Medium priority
@@ -27,3 +26,4 @@
 * [x] Fix broken elements on language switch (use .d-none and .d-block classes)
 * [x] Add a english version of the mailto button
 * [x] Refactor projects insert function
+* [x] Keep the language selector persistent through pages
