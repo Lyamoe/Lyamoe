@@ -1,6 +1,6 @@
 import { projects } from "../data/projects.js";
 
-export function insertProjects(currLang) {
+export function insertProjects(localeTexts) {
 	const container = document.getElementById("card-group");
 
 	if (!container) {
@@ -8,18 +8,18 @@ export function insertProjects(currLang) {
 		return;
 	}
 
-	const sortedProjects = projects.sort((a, b) => {
+	const mergedProjects = getLocalizedProjectsList(localeTexts);
+
+	const sortedProjects = mergedProjects.sort((a, b) => {
 		return new Date(b.releaseDate) - new Date(a.releaseDate);
 	});
 
 	const cardsHTML = sortedProjects
 		.map((project) => {
-			const [description, altText, releaseLabel] = matchTextCurrentLang(
-				currLang,
-				project,
+			const formattedDate = changeDateFormat(
+				project.releaseDate,
+				project.dateFormat,
 			);
-
-            const formattedDate = changeDateFormat(project.releaseDate, currLang)
 
 			return `
                     <a class="project-card col" href="${project.link}" target="_blank" rel="noopener noreferrer">
@@ -28,15 +28,15 @@ export function insertProjects(currLang) {
                                 src="${project.bannerImage}"
                                 class="card-img-top object-fit-cover max-h-25vh"
                                 style="max-height: 50vh"
-                                alt="${altText || "Project image"}"
+                                alt="${project.bannerAlt || "Project image"}"
                             />
                             <div class="card-body">
                                 <h2 class="card-title fs-5 fs-md-4">${project.name}</h2>
                                 <p class="text-muted small">
-                                    ${releaseLabel}: ${formattedDate}
+                                    ${project.releaseLabel}: ${formattedDate}
                                 </p>
                                 <p class="card-text fs-6 fs-md-5">
-                                    ${description}
+                                    ${project.description}
                                 </p>
                             </div>
                         </div>
@@ -48,54 +48,27 @@ export function insertProjects(currLang) {
 	container.innerHTML = cardsHTML;
 }
 
-function matchTextCurrentLang(lang, project) {
-	let desc;
-	let altText;
-	let releaseLabel;
+function getLocalizedProjectsList(localeData) {
+	const releaseLabel = localeData.releaseLabel;
+	const dateFormat = localeData.dateFormat;
+	const translations = localeData.projectsData;
 
-	switch (lang) {
-		case "ptBR":
-			desc = project.descriptionPtBr;
-			altText = project.bannerImageAltPtBr;
-			releaseLabel = "Lançamento";
-			break;
-		case "en":
-			desc = project.descriptionEn;
-			altText = project.bannerImageAltEn;
-			releaseLabel = "Released";
-			break;
-		default:
-			console.warn(`Language ${lang} was not found`);
-			break;
-	}
-
-	return [desc, altText, releaseLabel];
+	return Object.keys(projects).map((key) => ({
+		id: key,
+		...projects[key], // releaseDate, bannerImage, link
+		...translations[key], // name, description, bannerAlt
+		releaseLabel,
+		dateFormat,
+	}));
 }
 
-function changeDateFormat(date, lang) {
-    let timeLoc;
+function changeDateFormat(date, timeLoc) {
+	const formattedDate = new Date(date).toLocaleDateString(timeLoc, {
+		year: "numeric",
+		month: "short",
+		day: "numeric",
+		timeZone: "UTC",
+	});
 
-    switch (lang) {
-		case "ptBR":
-			timeLoc = "pt-BR";
-			break;
-		case "en":
-			timeLoc = "en-US";
-			break;
-		default:
-			console.warn(`Language ${lang} was not found`);
-			break;
-	}
-
-	const formattedDate = new Date(date).toLocaleDateString(
-		timeLoc,
-		{
-			year: "numeric",
-			month: "short",
-			day: "numeric",
-            timeZone: "UTC"
-		},
-	);
-
-    return formattedDate;
+	return formattedDate;
 }

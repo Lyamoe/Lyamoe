@@ -1,7 +1,7 @@
 export const ptBR = {
 	head: {
 		title: "Portfolio de Lyamoe",
-		metaDescription: "Conheça Lyam, suas habilidades e seus projetos."
+		metaDescription: "Conheça Lyam, suas habilidades e seus projetos.",
 	},
 	header: {
 		logoAlt: "Assinatura da Lyam como logo do portfólio",
@@ -25,6 +25,38 @@ export const ptBR = {
 	},
 	projects: {
 		title: "Projetos",
+		releaseLabel: "Lançamento",
+		dateFormat: "pt-BR",
+		projectsData: {
+			lattematico: {
+				name: "Lattemático",
+				description:
+					"Desenvolvido em grupo para a Game Jam Fatec São Sebastião, realizada na faculdade com o objetivo de ensinar matemática para vestibulandos de uma forma dinâmica e divertida.",
+				bannerAlt:
+					"Fundo do menu principal do jogo Lattemático, mostrando o personagem Latte, uma pessoa de cabelos brancos vestindo uma capa vermelha, em frente a uma torre de tijolos.",
+			},
+			portfolio: {
+				name: "Meu Portfólio Pessoal",
+				description:
+					"Portfólio pessoal criado para demonstrar minhas habilidades e projetos desenvolvidos ao longo da minha jornada como desenvolvedora.",
+				bannerAlt:
+					"Página inicial do portfólio, mostrando o nome da Lyam no centro dentro de um círculo rosa e uma barra de navegação no topo com links para as páginas Início, Projetos e Sobre.",
+			},
+			mentalKombat: {
+				name: "Mental Kombat",
+				description:
+					"Segundo jogo desenvolvido para outra edição da Game Jam Fatec São Sebastião, com o objetivo de ensinar crianças a fazer cálculos matemáticos mentalmente, sem o auxílio de papel ou calculadora.",
+				bannerAlt:
+					"Tela do menu principal do jogo Mental Kombat, mostrando um fundo xadrez com a logo do jogo e 3 botões abaixo com as opções: modos de jogo, dificuldade e jogar.",
+			},
+			bunnit: {
+				name: "Bunnit - Calculadoras de Saúde",
+				description:
+					"Site de calculadoras de saúde desenvolvido como aprendizado de JavaScript modular, visando reutilização de código e manutenibilidade.",
+				bannerAlt:
+					"Página inicial do site Bunnit, mostrando todas as calculadoras disponíveis no site e as vantagens de usá-lo.",
+			},
+		},
 	},
 	footer: {
 		copyright: "Portfólio © Lyamoe",

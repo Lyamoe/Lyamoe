@@ -58,7 +58,7 @@ function updatePageContent(texts, currentPage, lang) {
 			updateAboutPage(texts.about);
 			break;
 		case "projects":
-			updateProjectsPage(texts.projects, lang);
+			updateProjectsPage(texts.projects);
 			break;
 		default:
 			console.error(`The page ${currentPage} does not exist in the project`);
@@ -113,11 +113,11 @@ function updateAboutPage(texts) {
 	if (bannerImage) bannerImage.setAttribute("alt", texts.bannerAlt);
 }
 
-function updateProjectsPage(texts, lang) {
+function updateProjectsPage(texts) {
 	const titleText = document.getElementById("title");
 
 	if (titleText) titleText.innerText = texts.title;
-	insertProjects(lang); //* update the language and add them
+	insertProjects(texts); //* update the language and add them
 }
 
 function updateFooter(texts) {
