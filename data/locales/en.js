@@ -38,7 +38,7 @@ export const en = {
 			portfolio: {
 				name: "My Personal Portfolio",
 				description:
-					"Personal portfolio created to demonstrate my skills and projects developed throughout my journey as a developer.",
+					"This current website, created to demonstrate my skills and projects developed throughout my journey as a developer.",
 				bannerAlt:
 					"Homepage of the portfolio, showing Lyam's name in the center inside a pink circle and a navigation bar at the top with links to the Home, Projects, and About pages.",
 			},

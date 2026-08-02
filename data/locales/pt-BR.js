@@ -38,7 +38,7 @@ export const ptBR = {
 			portfolio: {
 				name: "Meu Portfólio Pessoal",
 				description:
-					"Portfólio pessoal criado para demonstrar minhas habilidades e projetos desenvolvidos ao longo da minha jornada como desenvolvedora.",
+					"Este site que você está vendo agora, criado para demonstrar minhas habilidades e projetos desenvolvidos ao longo da minha jornada como desenvolvedora.",
 				bannerAlt:
 					"Página inicial do portfólio, mostrando o nome da Lyam no centro dentro de um círculo rosa e uma barra de navegação no topo com links para as páginas Início, Projetos e Sobre.",
 			},
