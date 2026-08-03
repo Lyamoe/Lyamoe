@@ -11,7 +11,7 @@
 ## 💤 Low priority
 
 * [ ] Spanish version of the portfolio
-* [ ] Draw a better self portrait
+* [ ] Make SCSS files better
 
 ## ✅ Completed
 
@@ -31,3 +31,4 @@
 * [x] Missing Title translations in head
 * [x] Give eng translations to project names that need it
 * [x] Add stack to projects I've made
+* [x] Draw a better self portrait

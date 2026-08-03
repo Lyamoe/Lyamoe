@@ -38,7 +38,7 @@ export function insertProjects(localeTexts) {
                             />
                             <div class="card-body">
                                 <h2 class="card-title fs-5 fs-md-4">${project.name}</h2>
-								<div class="d-flex gap-2 m-1">${techDom}</div>
+								<div class="d-flex gap-2 my-1">${techDom}</div>
                                 <p class="text-muted small">
                                     ${project.releaseLabel}: ${formattedDate}
                                 </p>
