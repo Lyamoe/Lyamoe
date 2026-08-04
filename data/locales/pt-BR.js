@@ -31,7 +31,7 @@ export const ptBR = {
 			lattematico: {
 				name: "Lattemático",
 				description:
-					"Desenvolvido em grupo para a Game Jam Fatec São Sebastião, realizada na faculdade com o objetivo de ensinar matemática para vestibulandos de uma forma dinâmica e divertida.",
+					"Construí o código das caixas de perguntas neste jogo para a Game Jam Fatec São Sebastião, cujo objetivo é ensinar matemática aos vestibulandos de forma divertida.",
 				bannerAlt:
 					"Fundo do menu principal do jogo Lattemático, mostrando o personagem Latte, uma pessoa de cabelos brancos vestindo uma capa vermelha, em frente a uma torre de tijolos.",
 			},
@@ -43,16 +43,16 @@ export const ptBR = {
 					"Página inicial do portfólio, mostrando o nome da Lyam no centro dentro de um círculo rosa e uma barra de navegação no topo com links para as páginas Início, Projetos e Sobre.",
 			},
 			magicNums: {
-				name: "Números Mágicos",
+				name: "Magic Nums",
 				description:
-					"Participei do projeto da minha amiga dando dicas de programação e criando a arte para as habilidades. O jogo foi lançado na Game Jam Fatec São Sebastião e obteve terceiro lugar.",
+					"Projeto da minha amiga Zixxi, em que participei com código e arte para as habilidades. O jogo ficou em 3° lugar na Game Jam Fatec São Sebastião.",
 				bannerAlt:
 					"Combate no jogo, mostrando o jogador, o inimigo, suas barras de vida e os poderes que o jogador pode usar",
 			},
 			mentalKombat: {
 				name: "Mental Kombat",
 				description:
-					"Segundo jogo desenvolvido para outra edição da Game Jam Fatec São Sebastião, com o objetivo de ensinar crianças a fazer cálculos matemáticos mentalmente, sem o auxílio de papel ou calculadora.",
+					"Desenvolvi toda a árte de código deste jogo, que foi lançado na Game Jam Fatec São Sebastião. O público alvo são crianças de 8 a 12 anos para fixar conhecimentos matemáticos.",
 				bannerAlt:
 					"Tela do menu principal do jogo Mental Kombat, mostrando um fundo xadrez com a logo do jogo e 3 botões abaixo com as opções: modos de jogo, dificuldade e jogar.",
 			},
