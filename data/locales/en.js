@@ -29,41 +29,39 @@ export const en = {
 		dateFormat: "en-US",
 		projectsData: {
 			lattematico: {
-				name: "Lattematico",
+				name: "Lattemático",
 				description:
-					"Developed as a group for the Game Jam Fatec São Sebastião, held at the college with the goal of teaching mathematics to students preparing for university entrance exams in a dynamic and fun way.",
+					"I built the code for the question boxes in this game for the Fatec São Sebastião Game Jam, whose objective is to teach mathematics to students preparing for university entrance exams in a fun way.",
 				bannerAlt:
-					"Background of the main menu of the game Lattemático, showing the character Latte, a person with white hair wearing a red cape, in front of a brick tower.",
+					"Background of the main menu of the Lattemático game, showing the character Latte, a person with white hair wearing a red cape, in front of a brick tower.",
 			},
 			portfolio: {
 				name: "My Personal Portfolio",
 				description:
-					"This current website, created to demonstrate my skills and projects developed throughout my journey as a developer.",
+					"This website you are seeing now, created to demonstrate my skills and projects developed throughout my journey as a developer.",
 				bannerAlt:
 					"Homepage of the portfolio, showing Lyam's name in the center inside a pink circle and a navigation bar at the top with links to the Home, Projects, and About pages.",
 			},
 			magicNums: {
 				name: "Magic Nums",
 				description:
-					"I participated in my friend's project by giving programming tips and creating the art for the abilities. The game was launched at the Fatec São Sebastião Game Jam and won third place.",
-
+					"Project by my friend Zixxi, in which I participated with code and art for the skills. The game came in 3rd place at the Fatec São Sebastião Game Jam.",
 				bannerAlt:
-					"Combat in the game, showing the player, the enemy, their health bars, and the powers the player can use",
+					"Combat in the game, showing the player, the enemy, their health bars, and the powers the player can use.",
 			},
 			mentalKombat: {
 				name: "Mental Kombat",
 				description:
-					"Second game developed for another edition of the Game Jam Fatec São Sebastião, with the goal of teaching children to do mental math calculations without the aid of paper or a calculator.",
+					"I developed all the code for this game, which was launched at the Fatec São Sebastião Game Jam. The target audience is children aged 8 to 12 to reinforce mathematical knowledge.",
 				bannerAlt:
 					"Main menu screen of the Mental Kombat game, showing a checkered background with the game logo and 3 buttons below with the options: game modes, difficulty, and play.",
 			},
-
 			bunnit: {
 				name: "Bunnit - Health Calculators",
 				description:
-					"Health calculator website developed as a modular JavaScript learning tool, aiming for code reuse and maintainability.",
+					"Health calculator website developed as a learning experience in modular JavaScript, aiming for code reuse and maintainability.",
 				bannerAlt:
-					"Homepage of the Bunnit website, showing all the calculators available on the site and the advantages of using it.",
+					"Homepage of the Bunnit website, showing all available calculators.",
 			},
 		},
 	},
